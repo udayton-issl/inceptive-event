@@ -1,0 +1,29 @@
+namespace Camera.Data;
+
+struct dataPoint {
+    x:ushort;
+    y:ushort;
+    time:ulong;
+    polarity:ubyte;
+}
+
+struct inceptiveEventsBuffer {
+    x:ushort;
+    y:ushort;
+    time:ulong;
+    trailingNum:uint;
+}
+
+struct trailingEventsBuffer {
+    x:ushort;
+    y:ushort;
+    time:ulong;
+}
+
+table DataCollection {
+    collectedData:[dataPoint];
+    collectedInceptive:[inceptiveEventsBuffer];
+    collectedTraling:[trailingEventsBuffer];
+}
+
+root_type DataCollection;
